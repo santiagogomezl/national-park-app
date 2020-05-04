@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>National Parks Services finder</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <h1>National Parks Services finder</h1>
+
+        <form id="js-form">
+            <label for="search-term">Search State(s)</label>
+            <input type="text" name="search-term" id="js-search-term" placeholder="CA,NY,KY" required >
+
+            
+
+            <label for="max-results">Maximum results to return</label>
+            <input type="number" name="max-results" id="js-max-results" value="10">
+
+            <input type="submit" value="Go!">
+        </form>
+
+        <p id="js-error-message" class="error-message"></p>
+        <section id="results" class="hidden">
+            <h2>Search results</h2>
+            <ul id="results-list">
+            </ul>
+        </section>
+        <section id="format-error" class="hidden">
+            <h2>There's an error in your search</h2>
+            <p>
+                Search National Parks by uppercase two-letters state code and separated by comma ','<br>
+                In the fashion: CA,NY,KY
+            </p>
+        </section>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" 
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" 
+    crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
